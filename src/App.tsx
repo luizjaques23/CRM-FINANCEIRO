@@ -8,6 +8,7 @@ import { Transaction } from "./types";
 import { AddTransaction } from "./components/AddTransaction";
 import { TransactionList } from "./components/TransactionList";
 import { MonthlyChart } from "./components/MonthlyChart";
+import ShaderBackground from "./components/ui/shader-background";
 import {
   Wallet,
   TrendingUp,
@@ -124,12 +125,8 @@ export default function App() {
   const remainingCapital = totalIncome - totalDebtPaid;
 
   return (
-    <div className="min-h-screen bg-[#050505] text-zinc-100 py-12 px-4 sm:px-6 lg:px-8 font-sans relative overflow-x-hidden">
-      {/* Ambient background effects */}
-      <div className="fixed inset-0 opacity-20 pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-emerald-600 rounded-full blur-[120px]"></div>
-      </div>
+    <div className="min-h-screen bg-[#050505]/80 text-zinc-100 py-12 px-4 sm:px-6 lg:px-8 font-sans relative overflow-x-hidden">
+      <ShaderBackground />
 
       <div className="max-w-6xl mx-auto space-y-8 w-full relative z-10 flex flex-col min-h-[calc(100vh-6rem)]">
         {/* Header */}

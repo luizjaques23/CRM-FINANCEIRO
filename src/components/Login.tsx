@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { supabase } from "../lib/supabase";
 import { Wallet, LogIn, Loader2 } from "lucide-react";
+import ShaderBackground from "./ui/shader-background";
 
 export function Login() {
   const [email, setEmail] = useState("");
@@ -52,11 +53,8 @@ export function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-[#050505] text-zinc-100 flex flex-col items-center justify-center p-6 relative overflow-hidden font-sans">
-      <div className="absolute inset-0 opacity-20 pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-emerald-600 rounded-full blur-[120px]"></div>
-      </div>
+    <div className="min-h-screen bg-[#050505]/80 text-zinc-100 flex flex-col items-center justify-center p-6 relative overflow-hidden font-sans">
+      <ShaderBackground />
 
       <div className="bg-white/5 border border-white/10 rounded-3xl p-8 max-w-sm w-full backdrop-blur-md z-10 shadow-2xl">
         <div className="flex flex-col items-center mb-8">

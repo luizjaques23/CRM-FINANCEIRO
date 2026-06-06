@@ -4,7 +4,7 @@ import { TransactionType, Transaction } from "../types";
 import { PlusCircle } from "lucide-react";
 
 interface Props {
-  onAdd: (transaction: Transaction) => void;
+  onAdd: (transaction: Omit<Transaction, "id" | "user_id">) => void;
 }
 
 export function AddTransaction({ onAdd }: Props) {

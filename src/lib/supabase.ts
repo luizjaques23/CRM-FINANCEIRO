@@ -1,7 +1,7 @@
 import { createClient } from "@supabase/supabase-js";
 
-let supabaseUrl = import.meta.env.VITE_SUPABASE_URL || "https://vitqkingsalwsaomffwy.supabase.co";
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || "sb_publishable_gjoCw4sTwuKHWMwWKzDukw_iVrBQaTi";
+let supabaseUrl = (import.meta as any).env?.VITE_SUPABASE_URL || "https://vitqkingsalwsaomffwy.supabase.co";
+const supabaseAnonKey = (import.meta as any).env?.VITE_SUPABASE_ANON_KEY || "sb_publishable_gjoCw4sTwuKHWMwWKzDukw_iVrBQaTi";
 
 // Sanitize URL to ensure it just contains the origin.
 // Users sometimes accidentally provide https://[...].supabase.co/rest/v1/ in their environment variables.
